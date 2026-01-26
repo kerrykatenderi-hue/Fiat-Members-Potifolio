@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#hero" class="logo">My Portfolio</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <img src="assets/images/PXL_20250127_074756234~2.jpg" alt="Ayuen's Photo" class="profile-img" onclick="openModal()">
+            <div class="hero-text">
+                <h1>Hi, I'm Ayuen</h1>
+                <p>Data Scientist</p>
+                <a href="#contact" class="cta-button">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello everyone, my name is Ayuen. I'm a year 2 semester 1 student pursuing a bachelor's degree in Data Science from Cavendish University. I chose to do Data Science because I think it would be a challenging and rewarding field.</p>
+            <p>When I'm not coding, i'm at the court playing basketball. I am very passionate about the sport.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>R</li>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <h3>Web Technologies</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <h3>Tools & Frameworks</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>Node.js</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <h3>Survey Monkey API Integration</h3>
+                    <p>My first project was a python based project to use an API to link survey monkey to a grant site. This was so that in case a person were to apply for a grant they wouldn't be redirected to any other site, instead they would be taken directly to the grant site.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <h3>FLDMS system</h3>
+                    <p>My second project was The Farmer Loan Data Management & Reporting System (FLDMS), which is a simplified R-based data management system designed to support the Parish Development Model (PDM) loan program that supports and provides loans to rural farmers to improve productivity and income. </p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <h3>Capstone Internship</h3>
+                    <p>The capstone project is one I am bound to do in the break of year one semester 2 to test the level of my skills as far as data science is concerned. I do not have any expectations but yet to find out. Hopefully it is a great one.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>I'm always interested in new opportunities and collaborations. Let's connect!</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:your.email@example.com">ayuenaguekayuen@gmail.com</a></p>
+                <p>GitHub: <a href="#" target="_blank">itz-ayuen</a></p>
+                <p>Phone: <a href="tel:+1234567890">+256-782-483-318</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-media">
+                <a href="https://www.instagram.com/_itz_ayuen_/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://x.com/itz_ayuen" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://github.com/itz-ayuen" target="_blank"><i class="fab fa-github"></i> Github</a>
+                <a href="https://www.facebook.com/itz.just.ayuen" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+            <p>&copy; 2024 Ayuen A. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openModal() {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "flex";
+            modalImg.src = "assets/images/PXL_20250127_074756234~2.jpg";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            var modal = document.getElementById("imageModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
